@@ -2,6 +2,8 @@ module Utils where
 
 import Data.Char
 import Data.Ord
+import Data.List
+import Data.Function
 
 strToAlphabetValues :: String -> [Int]
 strToAlphabetValues = map charToAlphabetPos
@@ -19,3 +21,9 @@ getMultiplicativeInverse :: Int -> Maybe Int
 getMultiplicativeInverse x 
     | gcd x 26 /= 1 = Nothing
     | otherwise = Just $ head $ dropWhile (\y -> y*x `rem` 26 /= 1) [1..26]
+
+
+analyseFrequency :: String -> [(Char, Float)]
+analyseFrequency st = [(char, freq) | char <- (nub st),
+                                     let freq = (fromIntegral $ length $ filter (==char) st) / (fromIntegral $ length st)]
+
