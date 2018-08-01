@@ -6,7 +6,7 @@ import Data.List
 import Data.Function
 
 strToAlphabetValues :: String -> [Int]
-strToAlphabetValues = map charToAlphabetPos
+strToAlphabetValues st = map charToAlphabetPos $ sanitiseString st
 
 alphabetValuesToStr :: [Int] -> String
 alphabetValuesToStr = map alphabetPosToChar
@@ -22,6 +22,8 @@ getMultiplicativeInverse x
     | gcd x 26 /= 1 = Nothing
     | otherwise = Just $ head $ dropWhile (\y -> y*x `rem` 26 /= 1) [1..26]
 
+sanitiseString :: String -> String
+sanitiseString st = map toUpper $ filter (isAlpha) st
 
 analyseFrequency :: String -> [(Char, Float)]
 analyseFrequency st = [(char, freq) | char <- (nub st),
