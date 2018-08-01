@@ -37,3 +37,5 @@ indexOfCoincidence st = sum [(fromIntegral (n * (n-1))) / (fromIntegral (textLen
                                                                                                           let n = countOccurrences char $ sanitiseString st]
                             where textLength = length $ sanitiseString st
                                                         
+
+
