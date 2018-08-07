@@ -13,7 +13,7 @@ Haskell 'random-shuffle' package
 
 To hillclimb:
 ```
-ghc -main-is HillClimbing.main --make 
+ghc -main-is HillClimbing.main --make -O
 ```
 Windows:
 ```
