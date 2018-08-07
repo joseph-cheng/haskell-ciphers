@@ -12,11 +12,14 @@ Haskell 'random-shuffle' package
 ## Usage
 
 To hillclimb:
-```ghc -main-is HillClimbing.main --make 
+```
+ghc -main-is HillClimbing.main --make 
 ```
 Windows:
-```HillClimb.exe
+```
+HillClimb.exe
 ```
 Linux:
-```./HillClimb
+```
+./HillClimb
 ```
