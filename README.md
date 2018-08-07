@@ -8,3 +8,15 @@ This is a set of tools used to encrypt, decrypt, and crack ciphers. All written 
 Haskell Platform
 Haskell 'random-shuffle' package
 ```
+
+## Usage
+
+To hillclimb:
+```ghc -main-is HillClimbing.main --make 
+```
+Windows:
+```HillClimb.exe
+```
+Linux:
+```./HillClimb
+```
